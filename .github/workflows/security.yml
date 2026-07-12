@@ -17,6 +17,9 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   security:
     uses: abdullahramadan-max/security-pipeline-template/.github/workflows/reusable-security.yml@main

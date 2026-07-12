@@ -1,8 +1,0 @@
-name: Test Reusable
-
-on:
-  workflow_dispatch:
-
-jobs:
-  test:
-    uses: abdullahramadan-max/security-pipeline-template/.github/workflows/hello.yml@main
