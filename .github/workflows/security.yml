@@ -1,0 +1,29 @@
+name: Enterprise Security Pipeline
+
+on:
+  push:
+    branches:
+      - develop
+      - sit
+      - uat
+      - main
+
+  pull_request:
+    branches:
+      - develop
+      - sit
+      - uat
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  security:
+    uses: abdullahramadan-max/security-pipeline-template/.github/workflows/reusable-security.yml@main
+
+    with:
+      language: node
+      node-version: "22"
